@@ -5,7 +5,15 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text style={styles.textColor}>Sandali</Text>
+      
+      <View style = {styles.carContainer}>
+
+        <View style = {styles.title}>
+          <Text style = {styles.mainTitle}>Model S</Text>
+          <Text style = {styles.subTitle}>Starting from $69,000</Text>
+        </View>
+
+      </View>
       
       <StatusBar style="auto" />
     </View>
@@ -15,12 +23,31 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'black',
+    backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'center',
    
   },
-  textColor:{
-    color:'white'
+
+  carContainer :{
+    width : '100%',
+    height: '100%',
+  },
+
+  title :{
+    marginTop : '30%',
+    width : '100%',
+    alignItems : 'center',
+  },
+ 
+  mainTitle: {
+    fontSize : 40,
+    fontWeight : '500',
+  },
+
+  subTitle : {
+    fontSize :16,
+    color : '#5c5e62',
   }
+
 });
